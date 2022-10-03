@@ -1,0 +1,2 @@
+Private key: cTnMByebAjVc8TjtQfaAtZGcm3eAL95DfhALtUXk6F58y6dpgy7N
+Address: mzLaAohp6ihFnuwQdQFFnm5zZ8jgh4UokJ
