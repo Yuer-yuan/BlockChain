@@ -41,10 +41,10 @@ def send_from_P2PKH_transaction(amount_to_send, txid_to_spend, utxo_index,
 if __name__ == '__main__':
     ######################################################################
     # TODO: set these parameters correctly
-    amount_to_send = 0.0002 # amount of BTC in the output you're splitting minus fee
+    amount_to_send = 0.0013 # amount of BTC in the output you're splitting minus fee
     txid_to_spend = (
         'cc8fb122460f9f4cd88cd4f3b5f149c07421da36835e55dea30e8162b1e68be3')
-    utxo_index = 0
+    utxo_index = 1
     ######################################################################
 
     txout_scriptPubKey = P2PKH_scriptPubKey(faucet_address)

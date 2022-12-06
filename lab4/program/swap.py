@@ -1,6 +1,7 @@
 import time
 import alice
 import bob
+from bitcoin.core import b2x
 
 ######################################################################
 #                                                                    #
@@ -69,21 +70,21 @@ import bob
 #
 
 alice_txid_to_spend = "783f4016bee7afdd479902e15b031a02077eb7a772293d731352e0bc4d5197e1"
-alice_utxo_index = 3
+alice_utxo_index = 7
 alice_amount_to_send = 0.0035
 
 bob_txid_to_spend = "8d8c4595ffc35e468541f6b4233eaf340cdd3574b8fa2bbaa71ed70ac542bc0a"
-bob_utxo_index = 3
+bob_utxo_index = 7
 bob_amount_to_send = 0.001
 
 # Get current block height (for locktime) in 'height' parameter for each blockchain (and put it into swap.py):
 #  curl https://api.blockcypher.com/v1/btc/test3
 #  https://live.blockcypher.com/btc-testnet/
-btc_test3_chain_height = 2408975
+btc_test3_chain_height = 2409651
 
 #  curl https://api.blockcypher.com/v1/bcy/test
 #  https://live.blockcypher.com/bcy/
-bcy_test_chain_height = 566525
+bcy_test_chain_height = 572648
 
 # Parameter for how long Alice/Bob should have to wait before they can take back their coins
 # alice_locktime MUST be > bob_locktime
@@ -158,8 +159,8 @@ def atomic_swap(broadcast_transactions=False, alice_redeems=True):
         bob.broadcast_BCY(bob_swap_tx)
 
     if broadcast_transactions:
-        print('Sleeping for 60 minutes to let transactions confirm...')
-        time.sleep(120 * 60)
+        print('Sleeping for 180 minutes to let transactions confirm...')
+        time.sleep(180 * 60)
 
     if alice_redeems:
         # Alice redeems her coins, revealing x publicly (it's now on the blockchain)

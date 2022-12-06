@@ -24,9 +24,9 @@ def split_coins(amount_to_send, txid_to_spend, utxo_index, n):
 if __name__ == '__main__':
     ######################################################################
     # TODO: set these parameters correctly
-    amount_to_send = 0.015 # amount of BTC in the output you're splitting minus fee
+    amount_to_send = 0.016 # amount of BTC in the output you're splitting minus fee
     txid_to_spend = (
-        '2766304925bd59fde20216c5836628ef70c36bccb5699b855732f3d0157e93a6')
+        'c77873b2b271a27d0f883da5de9b95bdb5541318fe108262c21d91bb5ab53912')
     utxo_index = 0
     n=10 # number of outputs to split the input into
     ######################################################################
